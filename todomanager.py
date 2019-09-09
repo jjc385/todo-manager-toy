@@ -26,6 +26,14 @@ class TodoManager:
         self.tasks = {}
 
     def addTask(self, task):
+        """Add a task to the manager
+
+        Parameters:
+        task -- The Task instance to be added
+
+        Returns:
+        The ID of the task added -- a UUID string
+        """
         if not isinstance(task, Task):
             raise ValueError(
                     "Expected parameter `task`"

@@ -32,3 +32,7 @@ class SimpleTodoTest(TestCase):
         id2 = self.manager.addTask(task2)
         self.assertEqual( len(self.manager.tasks), 2 )
         self.assertTrue( id2 in self.manager.tasks )
+
+    def test_addBadTask(self):
+        with self.assertRaises(ValueError):
+            self.manager.addTask(None)
