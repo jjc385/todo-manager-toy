@@ -1,6 +1,18 @@
 from unittest import TestCase
 from todomanager import TodoManager, Task
 
+class SimpleTaskTest(TestCase):
+
+    def test_simple(self):
+        content = "Here's task1's content"
+        task = Task(content)
+        self.assertEqual(task.content, content)
+
+    def test_badContent(self):
+        with self.assertRaises(ValueError):
+            content = None
+            task = Task(content)
+
 class SimpleTodoTest(TestCase):
 
     def setUp(self):
