@@ -24,8 +24,9 @@ class TodoManager:
     def addTask(self, task):
         if not isinstance(task, Task):
             raise ValueError(
-                    "Expected instance of Task, not {}, of type {}"
-                    .format(task, type(task))
+                    "Expected parameter `task`"
+                    "to be an instance of Task, not {}"
+                    .format(type(task))
                 )
         ID = str(uuid.uuid4())
         self.tasks[ID] = task
