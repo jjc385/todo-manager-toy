@@ -17,6 +17,10 @@ class Task:
         self.content = content
 
 class TodoManager:
+    """A simple object to keep track of tasks
+
+    Tracks tasks along with their assigned IDs.
+    """
 
     def __init__(self):
         self.tasks = {}
