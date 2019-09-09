@@ -27,7 +27,6 @@ class TodoManager:
                     "Expected instance of Task, not {}, of type {}"
                     .format(task, type(task))
                 )
-        #return  # intentional mistake, so some tests fail
         ID = str(uuid.uuid4())
         self.tasks[ID] = task
         return ID
